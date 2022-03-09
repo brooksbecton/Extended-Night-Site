@@ -1,6 +1,7 @@
 <script>
   import Feature from "../components/Feature.svelte";
 
+  import encLogo from "../assets/encLogo.svg";
   import iosBadge from "../assets/badge-app-store.svg";
   import googleBadge from "../assets/badge-google-play.svg";
 </script>
@@ -9,9 +10,9 @@
   <div
     class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center"
   >
-    <h1 class="text-text text-3xl satisfy z-10 md:text-5xl lg:text-6xl">
-      Extended Night Companion
-    </h1>
+    <div class="w-2/3 md:w-1/2 lg:w-1/3">
+      <img src={encLogo} alt="Extended Night Companion Logo" />
+    </div>
     <div class="flex flex-row justify-center items-center mt-6 ">
       <a
         class=" z-10  mr-4"
@@ -93,7 +94,7 @@
 <div class="bg-background Topography text-text flex flex-col items-center py-8">
   <!-- Review Section -->
   <div class="flex flex-col flex-1 w-5/6 xl:w-3/6">
-    <h2 class="text-2xl mb-4">What people think</h2>
+    <h1 class="text-2xl mb-4">What people think</h1>
 
     <div class="flex  flex-col md:flex-row">
       <div
