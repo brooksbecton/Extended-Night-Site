@@ -200,10 +200,14 @@
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
     overflow: hidden;
+
+    height: 40vh;
   }
 
-  .SnowContainer {
-    height: 40vh;
+  @media (min-width: 768px) {
+    .SnowContainer {
+      height: 50vh;
+    }
   }
 
   @function random_range($min, $max) {
@@ -251,9 +255,5 @@
     }
   }
 
-  @media (min-width: 768px) {
-    .SnowContainer {
-      height: 50vh;
-    }
-  }
+
 </style>
