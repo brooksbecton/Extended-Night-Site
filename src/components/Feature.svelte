@@ -94,6 +94,15 @@
       </p>
     </div>
   </div>
+
+  <div
+    class=" w-full pt-4  justify-center items-center  sm:flex sm:w-1/2 sm:pl-8  sm:pt-0 sm:items-start"
+  >
+    <img
+      src={featureImageMap[selectedFeature].image}
+      alt={featureImageMap[selectedFeature].altText}
+    />
+  </div>
   {#if selectedFeature === "maps"}
     <p class="flex sm:hidden mt-4 text-center">
       Explore maps from all regions with the ability to drop pins on maps to
@@ -113,12 +122,4 @@
       custom trophies.
     </p>
   {/if}
-  <div
-    class=" w-full pt-4  justify-center items-center  sm:flex sm:w-1/2 sm:pl-8  sm:pt-0 sm:items-start"
-  >
-    <img
-      src={featureImageMap[selectedFeature].image}
-      alt={featureImageMap[selectedFeature].altText}
-    />
-  </div>
 </div>
