@@ -1,10 +1,6 @@
 <script lang="ts">
   type Feature = "maps" | "journals" | "trophies";
 
-  import journal from "../assets/journalShot.png";
-  import map from "../assets/mapShot.png";
-  import trophy from "../assets/trophyShot.png";
-
   let selectedFeature: Feature = "maps";
   const featureImageMap: Record<
     Feature,
@@ -13,9 +9,9 @@
       altText: string;
     }
   > = {
-    maps: { image: map, altText: "" },
-    journals: { image: journal, altText: "" },
-    trophies: { image: trophy, altText: "" },
+    maps: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956542/extended-night-companion/mapShot.webp", altText: "" },
+    journals: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956549/extended-night-companion/journalShot.webp", altText: "" },
+    trophies: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956551/extended-night-companion/trophyShot.webp", altText: "" },
   };
 
   const setSelectedFeature = (newFeature: Feature) => {
