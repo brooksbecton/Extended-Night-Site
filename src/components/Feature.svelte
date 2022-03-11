@@ -9,9 +9,21 @@
       altText: string;
     }
   > = {
-    maps: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956542/extended-night-companion/mapShot.webp", altText: "" },
-    journals: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956549/extended-night-companion/journalShot.webp", altText: "" },
-    trophies: { image: "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956551/extended-night-companion/trophyShot.webp", altText: "" },
+    maps: {
+      image:
+        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956542/extended-night-companion/mapShot.webp",
+      altText: "Mystery Lake map with 6 custom pins dropped in it in the app",
+    },
+    journals: {
+      image:
+        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956549/extended-night-companion/journalShot.webp",
+      altText: "A list of 5 journal entries in the app",
+    },
+    trophies: {
+      image:
+        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956551/extended-night-companion/trophyShot.webp",
+      altText: "A list of The Long Dark trophies with checkboxes next to each",
+    },
   };
 
   const setSelectedFeature = (newFeature: Feature) => {
