@@ -126,8 +126,8 @@
   {/if}
   {#if selectedFeature === "trophies"}
     <p class="flex sm:hidden mt-4 text-center">
-      Record what trophys you have earned in the game. Also create your own
-      custom trophies.
+      Record what trophys from the game you have earned or challenge yourself
+      and create your own trophies to complete.
     </p>
   {/if}
 </div>
