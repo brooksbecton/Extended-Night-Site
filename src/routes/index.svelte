@@ -6,23 +6,25 @@
   import iosBadge from "../assets/badge-app-store.svg";
   import googleBadge from "../assets/badge-google-play.svg";
 
+  const delayModuleLoad = (module) =>
+    new Promise((res) => setTimeout(() => res(module), Math.random() * 2000));
 
-  const delayModuleLoad = module =>
-    new Promise(res =>
-      setTimeout(() => res(module), Math.random() * 2000),
-    );
-
-    const Snow = () => import("../components/Snow.svelte").then(delayModuleLoad);
-
-
+  const Snow = () => import("../components/Snow.svelte").then(delayModuleLoad);
 </script>
 
 <div class="bg-grey-300 relative SnowContainer">
   <div
     class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center"
   >
-    <div class="w-2/3 md:w-1/2 lg:w-1/3">
+    <div
+      class="flex  flex-col items-center text-center w-2/3 md:w-1/2 lg:w-1/3"
+    >
       <img src={encLogo} alt="Extended Night Companion Logo" />
+      <p class="text-md">
+        A companion app for <br class="inline md:hidden" />
+        <a class="text-primary hover:underline" href="https://www.thelongdark.com/" target="_blank">The Long Dark®</a
+        >
+      </p>
     </div>
     <div class="flex flex-row justify-center items-center mt-6 ">
       <a
@@ -51,7 +53,6 @@
   </div>
 
   <Lazy component={Snow} />
-
 </div>
 
 <div class="bg-background Topography text-text flex flex-col items-center py-8">
@@ -170,5 +171,4 @@
       height: 50vh;
     }
   }
-
 </style>
