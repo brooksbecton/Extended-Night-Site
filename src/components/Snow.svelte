@@ -3,7 +3,6 @@
 </script>
 
 <div transition:fade={{duration: 1000}}>
-
   <div class="snow"></div>
   <div class="snow"></div>
   <div class="snow"></div>
@@ -102,4 +101,12 @@
       }
     }
   }
+
+
+  @media (prefers-reduced-motion) {
+  .snow {
+    display: none;
+  }
+}
+
 </style>
