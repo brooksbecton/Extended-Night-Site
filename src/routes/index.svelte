@@ -1,9 +1,20 @@
 <script>
   import Feature from "../components/Feature.svelte";
+  import Lazy from "../components/Lazy.svelte";
 
   import encLogo from "../assets/encLogo.svg";
   import iosBadge from "../assets/badge-app-store.svg";
   import googleBadge from "../assets/badge-google-play.svg";
+
+
+  const delayModuleLoad = module =>
+    new Promise(res =>
+      setTimeout(() => res(module), Math.random() * 2000),
+    );
+
+    const Snow = () => import("../components/Snow.svelte").then(delayModuleLoad);
+
+
 </script>
 
 <div class="bg-grey-300 relative SnowContainer">
@@ -39,56 +50,8 @@
     </div>
   </div>
 
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
-  <div class="snow" />
+  <Lazy component={Snow} />
+
 </div>
 
 <div class="bg-background Topography text-text flex flex-col items-center py-8">
@@ -193,9 +156,7 @@
   <Feature />
 </div>
 
-<style lang="scss">
-  // source https://codepen.io/alphardex/pen/dyPorwJ
-
+<style>
   .SnowContainer {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
@@ -209,51 +170,5 @@
       height: 50vh;
     }
   }
-
-  @function random_range($min, $max) {
-    $rand: random();
-    $random_range: $min + floor($rand * (($max - $min) + 1));
-    @return $random_range;
-  }
-
-  .snow {
-    $total: 50;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    overflow: hidden;
-
-    @for $i from 1 through $total {
-      $random-x: calc(random(1000000) * 0.0001vw);
-      $random-offset: random_range(-100000, 100000) * 0.0001vw;
-      $random-x-end: calc($random-x + $random-offset);
-      $random-x-end-yoyo: calc($random-x + ($random-offset / 2));
-      $random-yoyo-time: calc(random_range(30000, 80000) / 100000);
-      $random-yoyo-y: calc($random-yoyo-time * 50vh);
-      $random-scale: random(10000) * 0.0001;
-      $fall-duration: random_range(10, 30) * 1s;
-      $fall-delay: random(30) * -1s;
-
-      &:nth-child(#{$i}) {
-        opacity: random(10000) * 0.0001;
-        transform: translate($random-x, -10px) scale($random-scale);
-        animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
-      }
-
-      @keyframes fall-#{$i} {
-        #{percentage($random-yoyo-time)} {
-          transform: translate($random-x-end, $random-yoyo-y)
-            scale($random-scale);
-        }
-
-        to {
-          transform: translate($random-x-end-yoyo, 50vh) scale($random-scale);
-        }
-      }
-    }
-  }
-
 
 </style>
