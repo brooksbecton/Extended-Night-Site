@@ -5,6 +5,7 @@
   import encLogo from "../assets/encLogo.svg";
   import iosBadge from "../assets/badge-app-store.svg";
   import googleBadge from "../assets/badge-google-play.svg";
+  import webBadge from "../assets/web.svg";
 
   const delayModuleLoad = (module) =>
     new Promise((res) => setTimeout(() => res(module), Math.random() * 2000));
@@ -22,20 +23,36 @@
       <img src={encLogo} alt="Extended Night Companion Logo" />
       <p class="text-md">
         A companion app for <br class="inline md:hidden" />
-        <a class="text-primary hover:underline" href="https://www.thelongdark.com/" target="_blank">The Long Dark®</a
+        <a
+          class="text-primary hover:underline"
+          href="https://www.thelongdark.com/"
+          target="_blank">The Long Dark®</a
         >
       </p>
     </div>
-    <div class="flex flex-row justify-center items-center mt-6 ">
+    <div
+      class="flex flex-col space-y-2 justify-center items-center mt-6  md:flex-row md:space-y-0"
+    >
       <a
-        class=" z-10  mr-4"
+        class="z-10  mr-0 md:mr-4"
+        href="https://app.extendednightcompanion.com/"
+      >
+        <img
+          height="40"
+          src={webBadge}
+          style="height: 40px"
+          alt="Use the web application"
+        />
+      </a>
+      <a
+        class="z-10  mr-0 md:mr-4"
         href="https://apps.apple.com/us/app/extended-night-companion-app/id1554875268"
       >
         <img
           height="40"
-          width="120"
+          width="135"
           src={iosBadge}
-          alt="Download on the App Store "
+          alt="Download on the App Store"
         />
       </a>
       <a
