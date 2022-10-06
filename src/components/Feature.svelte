@@ -1,4 +1,8 @@
 <script lang="ts">
+  import journalShot from "../assets/journalShot.png";
+  import mapShot from "../assets/mapShot.png";
+  import trophyShot from "../assets/trophyShot.png";
+
   type Feature = "maps" | "journals" | "trophies";
 
   let selectedFeature: Feature = "maps";
@@ -10,18 +14,15 @@
     }
   > = {
     maps: {
-      image:
-        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956542/extended-night-companion/mapShot.webp",
+      image: mapShot,
       altText: "Mystery Lake map with 6 custom pins dropped in it in the app",
     },
     journals: {
-      image:
-        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956549/extended-night-companion/journalShot.webp",
+      image: journalShot,
       altText: "A list of 5 journal entries in the app",
     },
     trophies: {
-      image:
-        "https://res.cloudinary.com/dv5szgigi/image/upload/f_auto/v1646956551/extended-night-companion/trophyShot.webp",
+      image: trophyShot,
       altText: "A list of The Long Dark trophies with checkboxes next to each",
     },
   };
