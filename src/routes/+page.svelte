@@ -114,7 +114,7 @@
             />
           </svg>
         </div>
-        <p>179 Ratings</p>
+        <p>254 Ratings</p>
       </div>
 
       <div class="flex w-full flex-col md:w-3/4">
