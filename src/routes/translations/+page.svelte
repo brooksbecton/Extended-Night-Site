@@ -35,8 +35,10 @@
       <li>Click on the link below to <strong>view</strong> the translations</li>
       <ul>
         <li>
-          <a href={TRANSLATIONS_SPREADSHEET_VIEW_URL} target="_blank"
-            >Extended Night Companion Translations</a
+          <a
+            href={TRANSLATIONS_SPREADSHEET_VIEW_URL}
+            target="_blank"
+            rel="noreferrer">Extended Night Companion Translations</a
           >
         </li>
       </ul>
@@ -57,8 +59,10 @@
       </li>
       <ul>
         <li>
-          <a href={TRANSLATIONS_SPREADSHEET_COPY_URL} target="_blank"
-            >Extended Night Companion Translations</a
+          <a
+            href={TRANSLATIONS_SPREADSHEET_COPY_URL}
+            target="_blank"
+            rel="noreferrer">Extended Night Companion Translations</a
           >
         </li>
       </ul>
