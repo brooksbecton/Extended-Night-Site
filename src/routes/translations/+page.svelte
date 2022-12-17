@@ -21,8 +21,8 @@
       </p>
       <p>
         Changing the text in the app is really easy! If members of the community
-        can help with translations, we can make the app more accessible for
-        non-English speakers.
+        can help with translations, we can make the app more accessible to all
+        players!
       </p>
       <p class="mb-0">
         I've made a Google spreadsheet to hold the text for the app. Hopefully,
