@@ -13,12 +13,12 @@
   const Snow = () => import("../components/Snow.svelte").then(delayModuleLoad);
 </script>
 
-<div class="bg-grey-300 relative SnowContainer">
+<div class="bg-grey-300 SnowContainer relative">
   <div
-    class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center"
+    class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center"
   >
     <div
-      class="flex  flex-col items-center text-center w-2/3 md:w-1/2 lg:w-1/3"
+      class="flex  w-2/3 flex-col items-center text-center md:w-1/2 lg:w-1/3"
     >
       <img src={encLogo} alt="Extended Night Companion Logo" />
       <p class="text-md">
@@ -26,12 +26,13 @@
         <a
           class="text-primary hover:underline"
           href="https://www.thelongdark.com/"
-          target="_blank">The Long Dark®</a
+          target="_blank"
+          rel="noreferrer">The Long Dark®</a
         >
       </p>
     </div>
     <div
-      class="flex flex-col space-y-2 justify-center items-center mt-6  md:flex-row md:space-y-0"
+      class="mt-6 flex flex-col items-center justify-center space-y-2  md:flex-row md:space-y-0"
     >
       <a
         class="z-10  mr-0 md:mr-4"
@@ -72,17 +73,17 @@
   <Lazy component={Snow} />
 </div>
 
-<div class="bg-background Topography text-text flex flex-col items-center py-8">
+<div class="Topography flex flex-col items-center bg-background py-8 text-text">
   <!-- Review Section -->
-  <div class="flex flex-col flex-1 w-5/6 xl:w-3/6">
-    <h1 class="text-2xl mb-4">What people think</h1>
+  <div class="flex w-5/6 flex-1 flex-col xl:w-3/6">
+    <h1 class="mb-4 text-2xl">What people think</h1>
 
     <div class="flex  flex-col md:flex-row">
       <div
-        class="flex w-full flex-col text-center justify-center items-center md:w-1/4"
+        class="flex w-full flex-col items-center justify-center text-center md:w-1/4"
       >
         <p class="text-3xl">5 stars</p>
-        <div class="flex mb-3">
+        <div class="mb-3 flex">
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
             <path
               fill="currentColor"
@@ -118,11 +119,11 @@
       </div>
 
       <div class="flex w-full flex-col md:w-3/4">
-        <div class="flex-col flex-1 md:flex">
-          <div class="flex flex-col flex-1">
+        <div class="flex-1 flex-col md:flex">
+          <div class="flex flex-1 flex-col">
             <ul>
               <li class="flex flex-1 ">
-                <quote class="italic px-0 py-4 sm:p-4">
+                <quote class="px-0 py-4 italic sm:p-4">
                   Amazing companion app. I used to spend way too much time
                   trying to pull up different maps and half the time they were
                   either blurry or outdated. This is exactly what I needed.
@@ -132,7 +133,7 @@
                 </quote>
               </li>
               <li class="flex flex-1 ">
-                <quote class="italic px-0 py-4 sm:p-4">
+                <quote class="px-0 py-4 italic sm:p-4">
                   This app is amazing. You can keep track of challenges, badges,
                   and feats. There are maps for all the regions. It's a great
                   companion app. I use it a evertime I play.
@@ -141,7 +142,7 @@
                 </quote>
               </li>
               <li class="flex flex-1 ">
-                <quote class="italic px-0 py-4 sm:p-4">
+                <quote class="px-0 py-4 italic sm:p-4">
                   Very useful. You have the option to have the maps display
                   locations/items/etc, or leave it devoid of any information
                   beyond the map itself if you still want to discover everything
@@ -155,12 +156,12 @@
           </div>
           <div class="flex justify-end">
             <a
-              class="hover:underline text-primary  mr-4"
+              class="mr-4 text-primary  hover:underline"
               href="https://play.google.com/store/apps/details?id=com.broabect.greatnorthguide&showAllReviews=true"
               >More Android Reviews</a
             >
             <a
-              class="hover:underline text-primary"
+              class="text-primary hover:underline"
               href="https://apps.apple.com/us/app/extended-night-companion-app/id1554875268?see-all=reviews"
               >More iOS Reviews</a
             >

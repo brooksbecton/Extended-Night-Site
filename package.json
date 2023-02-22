@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.19.1",
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "^1.0.5",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.5.8",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
